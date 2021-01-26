@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDom from 'react-dom';
+import MainView from './components/MainView';
 
-const App = () => <p>hello world</p>;
-
+const App = () => (
+  <React.StrictMode>
+    <MainView />
+  </React.StrictMode>
+);
 ReactDom.render(<App />, document.getElementById('root') as HTMLElement);
