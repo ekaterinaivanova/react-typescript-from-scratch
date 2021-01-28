@@ -12,7 +12,7 @@ function RecipeList({ recipe }: Props) {
   }
   return (
     <div>
-      <p>{recipe.title}</p>
+      <h3>{recipe.title}</h3>
       <p>{recipe.content}</p>
       <p>
         {recipe.userByAuthorId?.firstName} {recipe.userByAuthorId?.lastName}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { RecipeList_recipes$data } from '../../__generated__/relay/RecipeList_recipes.graphql';
-
+import styled from 'styled-components';
 import {
   createPaginationContainer,
   RelayPaginationProp,
@@ -12,6 +12,14 @@ interface Props {
   recipes: RecipeList_recipes$data | null;
   relay: RelayPaginationProp;
 }
+
+const ItemContainer = styled.div`
+  padding: 8px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  background-color: ${({ theme }) => theme.colors.light.light};
+`;
 
 function RecipeList({ recipes, relay }: Props) {
   function loadMore() {
@@ -31,9 +39,9 @@ function RecipeList({ recipes, relay }: Props) {
         return <p>{noItem}</p>;
       }
       return (
-        <div style={{ padding: '8px', border: '1px solid grey' }} key={node.id}>
+        <ItemContainer key={node.id}>
           {index}. <RecipeItem recipe={node} />
-        </div>
+        </ItemContainer>
       );
     });
     return (
