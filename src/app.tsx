@@ -7,8 +7,8 @@ import GlobalStyle from '../src/style/GlobalStyle';
 
 const App = () => (
   <React.StrictMode>
+    <MainView />
     <ThemeProvider theme={DefaultTheme}>
-      <MainView />
       <GlobalStyle />
     </ThemeProvider>
   </React.StrictMode>

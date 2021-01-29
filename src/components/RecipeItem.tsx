@@ -1,7 +1,7 @@
 import React from 'react';
 import { RecipeItem_recipe } from '../../__generated__/relay/RecipeItem_recipe.graphql';
 import { createFragmentContainer, graphql } from 'react-relay';
-
+import RecipeFrom from './RecipeForm';
 interface Props {
   recipe: RecipeItem_recipe | null;
 }
@@ -17,6 +17,7 @@ function RecipeList({ recipe }: Props) {
       <p>
         {recipe.userByAuthorId?.firstName} {recipe.userByAuthorId?.lastName}
       </p>
+      <RecipeFrom recipe={recipe} />
     </div>
   );
 }
