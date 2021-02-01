@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import environment from '../relay/Environment';
 import { QueryRenderer, graphql, Environment } from 'react-relay';
 import RecipeList from './RecipeList';
 import { MainViewQueryResponse } from '__generated__/relay/MainViewQuery.graphql';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const query = graphql`
   query MainViewQuery {
@@ -16,26 +18,23 @@ interface Props {
   retry: (() => void) | null;
 }
 
-const renderComponent = ({ error, props }: Props) => {
-  if (error) {
-    return <div>Error!</div>;
-  }
-  if (props == null) {
-    return <div>Loading..</div>;
-  }
-  return <RecipeList recipes={props} />;
-};
-
-const App = function (): JSX.Element {
+const RenderComponent = () => {
+  const { t, i18n } = useTranslation('common');
   return (
-    <QueryRenderer
-      environment={environment as Environment}
-      query={query}
-      render={renderComponent}
-      variables={{}}
-      fetchPolicy="store-and-network"
-    />
+    <div>
+      <LanguageSwitcher />
+      {t('Loading')}
+      <br />
+      {t('new Valuew')}
+      {t('new translation')}
+    </div>
   );
 };
 
-export default App;
+export default function App(): JSX.Element {
+  return (
+    <Suspense fallback="loading...">
+      <RenderComponent />
+    </Suspense>
+  );
+}

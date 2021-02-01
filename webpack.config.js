@@ -1,15 +1,15 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   entry: './src/app.tsx',
   resolve: {
-    extensions: ['.ts', '.tsx', '.js'],
+    extensions: ['.ts', '.tsx', '.js', 'json'],
   },
   module: {
     rules: [
       {
-        test: /\.(ts|tsx)$/,
+        test: /\.(ts|tsx|json)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -35,6 +35,12 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'index.html'),
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        // Copy directory contents to {output}/to/directory/
+        { from: 'extractedTranslations', to: 'translations' },
+      ],
     }),
   ],
 };

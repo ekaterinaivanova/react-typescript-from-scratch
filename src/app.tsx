@@ -4,11 +4,12 @@ import MainView from './components/MainView';
 import { ThemeProvider } from 'styled-components';
 import DefaultTheme from './style/themes/DefaultTheme';
 import GlobalStyle from '../src/style/GlobalStyle';
+import './i18n';
 
 const App = () => (
   <React.StrictMode>
-    <MainView />
     <ThemeProvider theme={DefaultTheme}>
+      <MainView />
       <GlobalStyle />
     </ThemeProvider>
   </React.StrictMode>
