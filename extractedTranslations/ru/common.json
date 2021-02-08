@@ -1,0 +1,14 @@
+{
+  "Add step": "Новый шаг",
+  "Error": "Ошибка",
+  "Gluttonous": "Обжора",
+  "Loading": {
+    "": {
+      "": "Загрузка..."
+    }
+  },
+  "addRecipe": "Новый рецепт",
+  "addRecipeTitle": "Новый Рецепт",
+  "addStepPlaceholder": "Recipe step",
+  "loadMore": "Загрузи еще"
+}

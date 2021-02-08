@@ -1,0 +1,14 @@
+{
+  "Add step": "Add step",
+  "Error": "Error",
+  "Gluttonous": "Gluttonous",
+  "Loading": {
+    "": {
+      "": "Loading..."
+    }
+  },
+  "addRecipe": "Add recipe",
+  "addRecipeTitle": "Add New Recipe",
+  "addStepPlaceholder": "Recipe step",
+  "loadMore": "Load more"
+}
