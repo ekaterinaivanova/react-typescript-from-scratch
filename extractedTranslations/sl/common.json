@@ -1,5 +1,14 @@
 {
-	"Loading": "Nalaga se",
-	"new Valuew": "nekaj testiram",
-	"new translation": ""
+  "Add step": "Novi korak",
+  "Error": "Napaka",
+  "Gluttonous": "Požeruh",
+  "Loading": {
+    "": {
+      "": "Nalaganje..."
+    }
+  },
+  "addRecipe": "Dodaj recept",
+  "addRecipeTitle": "Dodaj Novi Recept",
+  "addStepPlaceholder": "Recipe step",
+  "loadMore": "Naloži več"
 }

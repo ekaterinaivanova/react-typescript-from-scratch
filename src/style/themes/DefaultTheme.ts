@@ -2,8 +2,8 @@ import { DefaultTheme, ColorDefinition } from 'styled-components';
 import BaseTheme from './BaseTheme';
 
 const colors: ColorDefinition = {
-  material: 'hsl(0, 0%, 96%)',
-  background: 'hsl(120, 4%, 91%)',
+  material: '#fff',
+  background: 'hsl(0, 0%, 90%)',
   primary: {
     lightest: '#839699',
     light: '#6B7677',
@@ -31,7 +31,7 @@ const colors: ColorDefinition = {
     dark: 'hsl(0, 0%, 63.5%)',
     normal: 'hsl(0, 0%, 75.3%)',
     light: 'hsl(0, 0%, 87.5%)',
-    lightest: 'hsl(0, 0%, 93.75%)',
+    lightest: 'hsl(0, 0%, 94.75%)',
   },
   dark: {
     darkest: 'hsl(0, 0%, 6.5%)',

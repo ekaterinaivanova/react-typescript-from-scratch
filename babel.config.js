@@ -5,7 +5,15 @@ module.exports = {
     '@babel/preset-typescript',
   ],
   plugins: [
-    ['i18next-extract', { nsSeparator: ':', locales: ['en', 'ru', 'sl'] }],
+    [
+      'i18next-extract',
+      {
+        nsSeparator: ':',
+        locales: ['en', 'ru', 'sl'],
+        useI18nextDefaultValue: true,
+        discardOldKeys: true,
+      },
+    ],
     ['styled-components', { ssr: true, displayName: true, preprocess: false }],
     ['relay', { artifactDirectory: './__generated__/relay/' }],
     '@babel/plugin-transform-runtime',

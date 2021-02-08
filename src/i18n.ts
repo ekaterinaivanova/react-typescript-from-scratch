@@ -12,7 +12,7 @@ i18n
   .init(
     {
       fallbackLng: ['en', 'ru', 'sl'],
-      debug: true,
+      debug: false,
       supportedLngs: ['en', 'ru', 'sl'],
       interpolation: {
         escapeValue: false, // not needed for react as it escapes by default
